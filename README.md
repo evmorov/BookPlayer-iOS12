@@ -1,144 +1,66 @@
 # BookPlayer iOS 12
 
-This repository is an unofficial fork of BookPlayer for personal maintenance and iOS 12 support. It is not affiliated with, endorsed by, or maintained by BookPlayer LLC or TortugaPower.
+This is an unofficial fork of BookPlayer.
 
-This fork is not intended for App Store distribution. It is intended to be built and installed from source for personal use.
+It is for personal maintenance and iOS 12 support.
 
-![BookPlayer - A wonderful player for your M4B/M4A/MP3 based audiobooks.](./.github/readme-header@2x.png)
+It is not affiliated with, endorsed by, or maintained by BookPlayer LLC or TortugaPower.
 
-![Four screenshots of BookPlayer on the iPhone X. Showing Player, Import options, the Library and, a playlist](./.github/readme-screenshots@2x.png)
+It is not intended for App Store distribution.
 
-Please visit our [Wiki](https://github.com/TortugaPower/BookPlayer/wiki) for our
-[FAQ](https://github.com/TortugaPower/BookPlayer/wiki/FAQ) and
-[guides](https://github.com/TortugaPower/BookPlayer/wiki/Developer-Guide) on how to add new themes and icons to the app.
+## Build and install on a device
 
-## Features
+You need:
 
-### Import
+1. A Mac with macOS.
+2. Xcode.
+3. Your Apple ID added in Xcode.
+4. A Lightning cable.
+5. An iPhone, iPad, or iPod touch running iOS 12 or later.
 
-- Using [AirDrop](https://support.apple.com/en-us/HT204144#receive) from your Mac or iOS device
-- From [Files](https://support.apple.com/en-us/ht206481) and other apps on your device
-- Via [File Sharing](https://support.apple.com/en-us/HT201301) in iTunes on your Mac or PC
-- Zip archives are supported and can be turned into playlists automatically
+Steps:
 
-### Manage
+1. Connect the device to the Mac with the cable.
+2. Unlock the device and tap Trust if iOS asks.
+3. Open Terminal in this folder.
+4. Run:
 
-- Maintain and see progress of your books
-- Mark books as finished
-- Drag & Drop to sort your library
-- Create playlists
-  - Automatically play items in turn
-  - Play the first unfinished file by tapping on the playlist artwork
-  - Move files to playlists from the library or import them directly
+```sh
+cp BuildConfiguration/Debug.template.xcconfig BuildConfiguration/Debug.xcconfig
+open BookPlayer.xcodeproj
+```
 
-### Listen
+5. In Xcode, open `BuildConfiguration/Debug.xcconfig`.
+6. Change `BP_BUNDLE_IDENTIFIER` to something unique, for example:
 
-- Control audio playback from the lock screen or the control center
-- Play and navigate books with Chapters
-- Jump to start of the current book
-- Change playback speed
-- Smart rewind
-- Volume Boost
-- Support for remote events from headset buttons and the lock screen
-- Sleep timer with adjustable duration
-- Support for VoiceOver
-- Dark mode for night owls
+```text
+com.yourname.bookplayerios12
+```
 
-### BookPlayer Plus
+7. Open Xcode account settings and add your Apple ID.
+8. Select the BookPlayer scheme.
+9. Select your connected device as the run device.
+10. Open the project settings.
+11. Select the BookPlayer target.
+12. Open Signing and Capabilities.
+13. Select your Apple ID team.
+14. Repeat the same team choice for the extension targets if Xcode asks.
+15. Press Run.
+16. If the device blocks the app, open Settings, then General, then Device Management, then trust your Apple ID.
+17. Press Run again.
 
-- Support Open Source development
-- Additional color themes
-- Select from alternative App Icons
+The app should install on the iPod and open.
 
-### Upcoming features
+## If signing fails
 
-See [our Roadmap on GitHub](https://github.com/GianniCarlo/Audiobook-Player/projects/1) for details.
+Use a unique bundle identifier. Do not use the original BookPlayer bundle identifier.
 
-### Supported locales & Languages
+If Xcode says a profile cannot be created, remove extra capabilities from the debug build or use a paid Apple Developer account.
 
-- English
-- Czech (Petr Kabrna)
-- German ([@pichfl](https://github.com/pichfl))
-- Russian ([@Nibelungc](https://github.com/Nibelungc), Andrey Kozlov, [@carcade](https://github.com/carcade) & Eugene
-  Newfield)
-- Spanish ([@GianniCarlo](https://github.com/GianniCarlo))
-- Swedish ([@hypeitinc](https://github.com/hypeitinc))
-- Chinese Simplified ([@wangqj](https://twitter.com/wangqj))
-- Danish (Carl Houmøller)
-- French (Christophe Vergne)
-- Romanian (Alexandru Hamuraru)
-- Turkish (Selçuk Onuk)
-- Italian (Alessio Franceschi)
-- Ukranian (Oleh)
-- Slovak (Peter Skladaný)
-- Portuguese (Vitor Jacinto)
-- Polish (Konrad Kwapisz)
-- Hungarian (Gábor Sári)
-
-Help us to [translate BookPlayer](#localisation).
-
-## Contributing
-
-Pull requests and ideas are always welcomed. Please
-[open an issue](https://github.com/TortugaPower/BookPlayer/issues/new?assignees=&labels=bug&template=bug.md) if you have any suggestions or found a bug.
-👍 See our [Contribution Guidelines](./CONTRIBUTING.md) for details, and our [Setup Guide](https://github.com/TortugaPower/BookPlayer/wiki/Developer-Guide#setting-up-the-project) for setting up your local environment.
-
-If you enjoy BookPlayer, we would be glad if you consider writing a review on the
-[App Store.](https://itunes.apple.com/us/app/bookplayer-audio-book-player/id1138219998?ls=1&mt=8)
-
-### Maintainers
-
-- [@GianniCarlo](https://github.com/GianniCarlo) - Original Idea & Creation
-- [@pichfl](https://github.com/pichfl) - UI Design & Artwork
-
-### Contributors
-
-- [@bryanrezende](https://github.com/bryanrezende) - Smart rewind
-- [@e7mac](https://github.com/e7mac) - Speed control, Autoplay
-- [@gpambrozio](https://github.com/gpambrozio) - Volume Boost
-- [@vab9](https://github.com/vab9) - AirDrop Support
-- [@atomicguy](https://github.com/atomicguy) - Zip Support
-- [@ryantstone](https://github.com/ryantstone) - VoiceOver Support
-
-A full list of all contributors can be found
-[on GitHub.](https://github.com/GianniCarlo/Audiobook-Player/graphs/contributors)
-
-### Community
-
-[Join us on our new Discord server](https://discord.gg/MjCUXgU) if you want to contribute or talk to other people using
-BookPlayer. Keep in mind that [you should file issues](#contributing) when you find bugs or have ideas for new features.
-Discord is a chat platform and while the maintainers will drop by once in a while, it is still a chat and not a
-bugtracker.
-
-### Localisation
-
-[![Localization generously sponsored by Lokalise, the best platform for adding lodalization to your applications](./.github/lokalise@2x.png)](https://lokalise.com/)
-
-If you want to help translating BookPlayer into your own language, send as an email at support@bookplayer.app so we can
-invite you to Lokalise.
-
-## Dependencies
-
-Managed with the [Swift Package Manager](https://swift.org/package-manager/)
-
-- [Alamofire](https://github.com/Alamofire/Alamofire) for downloading books via url scheme actions
-- [ColorCube](https://github.com/pixelogik/ColorCube) for extracting artwork colors
-- [DeviceKit](https://github.com/dennisweissmann/DeviceKit) for device information used in support requests
-- [Kingfisher](https://github.com/onevcat/Kingfisher) for contributors' profile pictures
-- [MarqueeLabel](https://github.com/cbpowell/MarqueeLabel) for scrolling labels
-- [DirectoryWatcher](https://github.com/GianniCarlo/DirectoryWatcher) for events on the document's folder
-- [Sentry](https://github.com/getsentry/sentry-cocoa) for crash reporting
-- [Sweetercolor](https://github.com/jathu/sweetercolor) for handling artwork colors
-- [SwiftReorder](https://github.com/GianniCarlo/SwiftReorder) for drag-and-drop on the UITableView
-- [SwiftyStoreKit](https://github.com/bizz84/SwiftyStoreKit) for the tip jar
-- [Telemetry](https://github.com/AppTelemetry/SwiftClient) for the analytics
-- [ZipArchive](https://github.com/ZipArchive/ZipArchive) for zip files
-
-Managed with [Homebrew](https://brew.sh)
-
-- [SwiftLint](https://github.com/realm/SwiftLint)
-- [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
+If you use a free Apple Developer account, the installed app may stop opening after a few days. Build and run it again from Xcode.
 
 ## License
 
-Licensed under [GNU GPL v. 3.0](https://opensource.org/licenses/GPL-3.0). See `LICENSE` for details.
+This fork keeps the original GPLv3 license.
+
+See LICENSE for details.
