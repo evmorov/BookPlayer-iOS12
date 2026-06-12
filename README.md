@@ -1,12 +1,12 @@
-[![BookPlayer - A wonderful player for your M4B/M4A/MP3 based audiobooks.](./.github/readme-header@2x.png)](https://itunes.apple.com/us/app/bookplayer-audio-book-player/id1138219998?ls=1&mt=8)
+# BookPlayer iOS 12
 
-<p align="center">
-    <a href="https://itunes.apple.com/us/app/bookplayer-audio-book-player/id1138219998?ls=1&amp;mt=8">
-        <img src="./.github/app-store-badge.svg" alt="Download on the App Store">
-    </a>
-</p>
+This repository is an unofficial fork of BookPlayer for personal maintenance and iOS 12 support. It is not affiliated with, endorsed by, or maintained by BookPlayer LLC or TortugaPower.
 
-[![Four screenshots of BookPlayer on the iPhone X. Showing Player, Import options, the Library and, a playlist](./.github/readme-screenshots@2x.png)](https://itunes.apple.com/us/app/bookplayer-audio-book-player/id1138219998?ls=1&mt=8)
+This fork is not intended for App Store distribution. It is intended to be built and installed from source for personal use.
+
+![BookPlayer - A wonderful player for your M4B/M4A/MP3 based audiobooks.](./.github/readme-header@2x.png)
+
+![Four screenshots of BookPlayer on the iPhone X. Showing Player, Import options, the Library and, a playlist](./.github/readme-screenshots@2x.png)
 
 Please visit our [Wiki](https://github.com/TortugaPower/BookPlayer/wiki) for our
 [FAQ](https://github.com/TortugaPower/BookPlayer/wiki/FAQ) and
