@@ -37,19 +37,21 @@ open BookPlayer.xcodeproj
 com.yourname.bookplayerios12
 ```
 
-7. Open Xcode account settings and add your Apple ID.
-8. Select the BookPlayer scheme.
-9. Select your connected device as the run device.
-10. Open the project settings.
-11. Select the BookPlayer target.
-12. Open Signing and Capabilities.
-13. Select your Apple ID team.
-14. Repeat the same team choice for the extension targets if Xcode asks.
-15. Press Run.
-16. If the device blocks the app, open Settings, then General, then Device Management, then trust your Apple ID.
-17. Press Run again.
+7. The home screen name is `BookPlayer12`.
+8. To change it, edit `CFBundleDisplayName` in `BookPlayer/Info.plist`.
+9. Open Xcode account settings and add your Apple ID.
+10. Select the BookPlayer scheme.
+11. Select your connected device as the run device.
+12. Open the project settings.
+13. Select the BookPlayer target.
+14. Open Signing and Capabilities.
+15. Select your Apple ID team.
+16. Repeat the same team choice for the extension targets if Xcode asks.
+17. Press Run.
+18. If the device blocks the app, open Settings, then General, then Device Management, then trust your Apple ID.
+19. Press Run again.
 
-The app should install on the iPod and open.
+The app should install on the device and open.
 
 ## If signing fails
 
